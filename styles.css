@@ -1,0 +1,224 @@
+html {
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+  }
+  
+  *, *:before, *:after {
+    box-sizing: inherit;
+    margin: 0;
+    padding: 0;
+  }
+  
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background: #fafafa;
+  }
+  
+  /* Navigation */
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    background: #ffffff;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  .logo {
+    font-weight: bold;
+    font-size: 1.2rem;
+    display: flex;
+    align-items: center;
+  }
+  
+  .logo .ket-symbol {
+    color: #0b5cff;
+    font-weight: normal;
+  }
+  
+  .nav-actions a {
+    margin-left: 1rem;
+    text-decoration: none;
+    color: #333;
+    font-weight: 500;
+  }
+  
+  .nav-actions a:hover {
+    color: #0b5cff;
+  }
+  
+  .btn-primary {
+    background: #0b5cff;
+    color: #fff !important;
+    padding: 0.6rem 1.2rem;
+    border-radius: 4px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: background 0.3s ease;
+  }
+  
+  .btn-primary:hover {
+    background: #094ecc;
+  }
+  
+  /* Hero Section */
+  .hero {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, #0b5cff, #4F9CFB);
+    min-height: 70vh;
+    padding: 2rem;
+    text-align: center;
+    color: #fff;
+  }
+  
+  .hero-content {
+    max-width: 700px;
+    margin: 0 auto;
+  }
+  
+  .hero h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    font-weight: 700;
+  }
+  
+  .hero p {
+    font-size: 1.15rem;
+    margin-bottom: 2rem;
+    max-width: 600px;
+    margin: 0 auto 2rem auto;
+  }
+  
+  .hero-content a.btn-primary {
+    background: #fff;
+    color: #0b5cff !important;
+    font-size: 1rem;
+  }
+  
+  .hero-content a.btn-primary:hover {
+    background: #f0f0f0;
+  }
+  
+  /* Features Section */
+  .features {
+    padding: 4rem 1rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+  }
+  
+  .features h2 {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    font-weight: 600;
+  }
+  
+  .feature-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+  
+  .feature-card {
+    background: #fff;
+    padding: 2rem;
+    border-radius: 6px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    text-align: left;
+  }
+  
+  .feature-card h3 {
+    margin-bottom: 1rem;
+    color: #0b5cff;
+    font-weight: 600;
+    font-size: 1.25rem;
+  }
+  
+  /* About Section */
+  .about {
+    padding: 4rem 1rem;
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+  }
+  
+  .about h2 {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    font-weight: 600;
+  }
+  
+  .about p {
+    font-size: 1.15rem;
+    line-height: 1.8;
+  }
+  
+  /* Contact Section */
+  .contact {
+    padding: 4rem 1rem;
+    max-width: 600px;
+    margin: 0 auto;
+    text-align: center;
+  }
+  
+  .contact h2 {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    font-weight: 600;
+  }
+  
+  .contact p {
+    margin-bottom: 2rem;
+    font-size: 1.1rem;
+  }
+  
+  .contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+  
+  .contact-form input,
+  .contact-form textarea {
+    width: 100%;
+    padding: 0.8rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1rem;
+  }
+  
+  .contact-form button {
+    align-self: flex-end;
+  }
+  
+  /* Footer */
+  .footer {
+    text-align: center;
+    padding: 1rem;
+    background: #fff;
+    border-top: 1px solid #ddd;
+  }
+  
+  .footer p {
+    color: #666;
+  }
+  
+  /* Responsive Design */
+  @media (min-width: 600px) {
+    .feature-grid {
+      grid-template-columns: repeat(3, 1fr);
+    }
+    
+    .hero h1 {
+      font-size: 3rem;
+    }
+    
+    .hero p {
+      font-size: 1.2rem;
+    }
+  }
+  
