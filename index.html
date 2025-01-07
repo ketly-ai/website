@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="description" content="Ketly - AI Automation to Streamline Your Business">
+  <title>Ketly</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header>
+    <nav class="navbar">
+      <div class="logo">
+        <!-- Keep the subtle quantum bra-ket notation as a nod to 'ketly' -->
+        <span class="ket-symbol">|</span>ketly<span class="ket-symbol">&gt;</span>
+      </div>
+      <div class="nav-actions">
+        <a href="#features">Features</a>
+        <a href="#about">About</a>
+        <a href="#contact" class="btn-primary">Get Started</a>
+      </div>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <div class="hero-content">
+      <h1>AI-Powered Automation</h1>
+      <p>Streamline repetitive business tasks with Ketly’s modern, scalable AI and automation solutions. Focus on what truly matters while we handle the rest.</p>
+      <a href="#contact" class="btn-primary">Request a Demo</a>
+    </div>
+  </section>
+
+  <section class="features" id="features">
+    <h2>Features</h2>
+    <div class="feature-grid">
+      <div class="feature-card">
+        <h3>Adaptive Workflows</h3>
+        <p>Automate tasks of all sizes with AI-driven processes that grow alongside your business needs.</p>
+      </div>
+      <div class="feature-card">
+        <h3>Actionable Insights</h3>
+        <p>Leverage data-driven analytics to optimize efficiency and identify new opportunities for improvement.</p>
+      </div>
+      <div class="feature-card">
+        <h3>Seamless Integration</h3>
+        <p>Connect your existing tools and systems for faster throughput and more accurate output.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="about" id="about">
+    <h2>About Ketly</h2>
+    <p>Ketly is here to help forward-thinking organizations reduce manual effort and boost productivity through AI-powered automation. Inspired by the quantum principle of making big impacts through small, precise steps, we deliver solutions that are efficient, scalable, and easy to implement. Our team, with more than a decade of software engineering and management experience, blends technical expertise and a passion for innovation to ensure your operations run smoother, faster, and smarter.</p>
+  </section>
+
+  <section class="contact" id="contact">
+    <h2>Get in Touch</h2>
+    <p>Ready to experience AI automation that truly solves your business challenges? Send us a message today.</p>
+    <form action="mailto:jay@ketly.ai" method="post" class="contact-form">
+      <input type="text" name="name" placeholder="Your Name" required/>
+      <input type="email" name="email" placeholder="Your Email" required/>
+      <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
+      <button type="submit" class="btn-primary">Send</button>
+    </form>
+  </section>
+
+  <footer class="footer">
+    <p>&copy; <span id="year"></span> Ketly. All Rights Reserved.</p>
+  </footer>
+
+  <script>
+    // Update the footer year dynamically
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
