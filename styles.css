@@ -31,6 +31,8 @@ html {
     font-size: 1.2rem;
     display: flex;
     align-items: center;
+    text-decoration: none;
+    color: #333;
   }
   
   .logo .ket-symbol {
