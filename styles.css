@@ -32,7 +32,7 @@ html {
     display: flex;
     align-items: center;
     text-decoration: none;
-    color: #333; 
+    color: #333;
   }
   
   .logo .ket-symbol {
@@ -40,6 +40,19 @@ html {
     font-weight: normal;
   }
   
+  .logo-image {
+    max-width: 100px;
+    height: auto;
+    width: 100%;
+    object-fit: contain;
+  }
+
+  @media (max-width: 600px) {
+    .logo-image {
+        max-width: 80px; /* Slightly smaller on mobile */
+    }
+  }
+
   .nav-actions a {
     margin-left: 1rem;
     text-decoration: none;
