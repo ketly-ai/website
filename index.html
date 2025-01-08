@@ -3,15 +3,16 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <meta name="description" content="Ketly AI - AI Automation to Streamline Your Business">
-  <title>Ketly AI</title>
+  <meta name="description" content="Ketly - AI Automation to Streamline Your Business">
+  <title>Ketly</title>
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
   <header>
     <nav class="navbar">
       <div class="logo">
-        <span class="ket-symbol">|</span>ketly<span class="ket-symbol">&gt;</span>&nbsp;AI
+        <!-- Keep the subtle quantum bra-ket notation as a nod to 'ketly' -->
+        <span class="ket-symbol">|</span>ketly<span class="ket-symbol">&gt;</span>
       </div>
       <div class="nav-actions">
         <a href="#features">Features</a>
@@ -24,7 +25,7 @@
   <section class="hero">
     <div class="hero-content">
       <h1>AI-Powered Automation</h1>
-      <p>Streamline repetitive business tasks with Ketly AI’s modern, scalable AI and automation solutions. Focus on what truly matters while we handle the rest.</p>
+      <p>Streamline repetitive business tasks with Ketly’s modern, scalable AI and automation solutions. Focus on what truly matters while we handle the rest.</p>
       <a href="#contact" class="btn-primary">Request a Demo</a>
     </div>
   </section>
@@ -48,29 +49,86 @@
   </section>
 
   <section class="about" id="about">
-    <h2>About Ketly AI</h2>
-    <p>Ketly AI is here to help forward-thinking organizations reduce manual effort and boost productivity through AI-powered automation. Inspired by the quantum principle of making big impacts through small, precise steps, we deliver solutions that are efficient, scalable, and easy to implement. Our team, with more than a decade of software engineering and management experience, blends technical expertise and a passion for innovation to ensure your operations run smoother, faster, and smarter.</p>
+    <h2>About Ketly</h2>
+    <p>Ketly is here to help forward-thinking organizations reduce manual effort and boost productivity through AI-powered automation. Inspired by the quantum principle of making big impacts through small, precise steps, we deliver solutions that are efficient, scalable, and easy to implement. Our team, with more than a decade of software engineering and management experience, blends technical expertise and a passion for innovation to ensure your operations run smoother, faster, and smarter.</p>
   </section>
 
   <section class="contact" id="contact">
     <h2>Get in Touch</h2>
     <p>Ready to experience AI automation that truly solves your business challenges? Send us a message today.</p>
-    <form action="https://formsubmit.co/jay@ketly.ai" method="post" class="contact-form">
-      <input type="text" name="name" placeholder="Your Name" required/>
-      <input type="email" name="email" placeholder="Your Email" required/>
-      <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
+    <form id="contactForm" class="contact-form">
+      <input type="text" name="name" id="name" placeholder="Your Name" required/>
+      <input type="email" name="email" id="email" placeholder="Your Email" required/>
+      <textarea name="message" id="message" placeholder="Your Message" rows="5" required></textarea>
       <input type="hidden" name="_subject" value="New form submission">
       <button type="submit" class="btn-primary">Send</button>
     </form>
+    
+    <div id="successMessage" class="hidden">
+      <h3>Thank you for your message!</h3>
+      <p>We'll get back to you soon.</p>
+    </div>
   </section>
 
   <footer class="footer">
-    <p>&copy; <span id="year"></span> Ketly AI. All Rights Reserved.</p>
+    <p>&copy; <span id="year"></span> Ketly. All Rights Reserved.</p>
   </footer>
+
+  <!-- Add jQuery and SweetAlert2 -->
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.7.3/dist/sweetalert2.all.min.js"></script>
+  <link href="https://cdn.jsdelivr.net/npm/sweetalert2@11.7.3/dist/sweetalert2.min.css" rel="stylesheet">
 
   <script>
     // Update the footer year dynamically
     document.getElementById('year').textContent = new Date().getFullYear();
+
+    // Handle form submission
+    $(document).ready(function() {
+      $('#contactForm').on('submit', function(e) {
+        e.preventDefault();
+        
+        const formData = {
+          name: $('#name').val(),
+          email: $('#email').val(),
+          message: $('#message').val(),
+          _subject: 'New form submission'
+        };
+
+        $.ajax({
+          method: 'POST',
+          url: 'https://formsubmit.co/ajax/jay@ketly.ai',
+          dataType: 'json',
+          accepts: 'application/json',
+          data: formData,
+          success: function(data) {
+            Swal.fire({
+              title: 'Thank you!',
+              text: 'Your message has been sent successfully.',
+              icon: 'success',
+              confirmButtonText: 'OK'
+            });
+            $('#contactForm')[0].reset(); // Reset form
+            console.log(data);
+          },
+          error: function(err) {
+            Swal.fire({
+              title: 'Error',
+              text: 'Sorry, there was an error. Please try again.',
+              icon: 'error',
+              confirmButtonText: 'OK'
+            });
+            console.log(err);
+          }
+        });
+      });
+    });
   </script>
+
+  <style>
+    .hidden {
+      display: none;
+    }
+  </style>
 </body>
 </html>
