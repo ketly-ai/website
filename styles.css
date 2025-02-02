@@ -111,7 +111,8 @@ html {
   .hero-content a.btn-primary {
     background: #fff;
     color: #0b5cff !important;
-    font-size: 1rem;
+    font-size: 1.5rem;
+    padding: 1rem 2rem;
   }
   
   .hero-content a.btn-primary:hover {
